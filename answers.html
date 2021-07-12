@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/17</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__logo logo">
+                            <a class="logo__img" href="index.html">
+                                <img src="images/logo.svg" alt="Лого">
+                            </a>
+                            <div class="logo__text">
+                                <span>Регистр пациентов</span>
+                                с нейрофиброматозом
+                            </div>
+                        </div>
+
+                        <!-- навигационное меню -->
+                        <!-- чтобы получить залогиненное состояние страницы, надо добавить класс log-in к элементам menu и breadcrumbs-->
+                        <div class="menu log-in">
+                            <div class="menu__overlay js_menu_overlay"></div>
+                            <nav class="menu__block">
+                                <div class="menu__logo logo">
+                                    <a class="logo__img" href="index.html">
+                                        <img src="images/logo.svg" alt="Лого">
+                                    </a>
+                                    <div class="logo__text">
+                                        <span>Регистр пациентов</span>
+                                        с нейрофиброматозом
+                                    </div>
+                                </div>
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Мои данные</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link active" href="#">Пациенты</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link menu__link-support" href="#">
+                                            Обращения в поддержку
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link menu__link-exit" href="#">
+                                            <svg width="18" height="20">
+                                                <use href=" images/sprite.svg#exit"></use>
+                                            </svg>
+                                            Выйти
+                                        </a>
+                                    </li>
+                                    <li class="menu__item menu__item-login">
+                                        <a class="menu__link menu__link-login" href="#">
+                                            <svg width="20" height="20">
+                                                <use href=" images/sprite.svg#user"></use>
+                                            </svg>
+                                            Личный кабинет
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <button class="hamburger js_hamburger" type="button">
+                            <span class="hamburger__line"></span>
+                        </button>
+                    </div>
+                    <div class="header__block">
+
+                        <!-- xлебные крошки -->
+                        <!-- чтобы получить залогиненное состояние страницы, надо добавить класс log-in к элементам menu и breadcrumbs-->
+                        <div class="breadcrumbs log-in">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Личный кабинет</a>
+                                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Пациенты</a></li>
+                                <li class="breadcrumbs__item"><span class="breadcrumbs__link">Валерия Ивановна Христорождественская</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="header__title">Ответы регистра</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ответы регистра -->
+        <section class="answers section">
+            <div class="container">
+                <div class="inner">
+                    <div class="answers__content content">
+                        <h2 class="answers__name">Валерия Ивановна Христорождественская</h2>
+                        <div class="answers__items">
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Ваш тип заболевания?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Нейрофиброматоз I типа
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Есть ли нейрофиброматоз у кого-то из Ваших родственников?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Да
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    У кого из Ваших родственников есть нейрофиброматоз?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>Мать</li>
+                                        <li>Другой родственник: брат</li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Сдавали ли Вы генетический тест на определение мутации в гене NF1?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Да
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Вы сдавали генетический тест на определение мутации в гене NF1 платно или бесплатно?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Бесплатно по ОМС
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Есть ли у вас официальный диагноз от врача нейрофиброматоз 1 типа?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Да
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    В каком возрасте Вам был поставлен диагноз нейрофиброматоз 1 типа?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        с 1 года до 5 лет
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Как быстро врачи поставили Вам диагноз нейрофиброматоз с момента появления первых
+                                    симптомов / первого обращения?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Прошло больше месяца
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Врач какой специализации установил Вам диагноз?
+                                </h3>
+                                <div class="answers__prompt">
+                                    Вы можете указать врача, который первым обратил внимание на характерные симптомы в
+                                    Вашем случае (например, наличие характерных пятен и т.п.)
+                                </div>
+                                <div class="answers__info">
+                                    <p>
+                                        Врач другой специализации
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    По каким признакам Вам был установлен диагноз?
+                                </h3>
+                                <div class="answers__prompt">
+                                    Выберите, пожалуйста, из списка только те симптомы, которые были у Вас на момент
+                                    постановки диагноза
+                                </div>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>
+                                            Пятна цвета «кофе с молоком»
+                                        </li>
+                                        <li>
+                                            Гиперпигментация
+                                        </li>
+                                        <li>
+                                            Узелки Лиша
+                                        </li>
+                                        <li>
+                                            Наличие нейрофиброматоза I типа у ближайших родственников
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    После того, как был поставлен диагноз, были ли Вам разъяснены последствия
+                                    заболевания?
+                                </h3>
+                                <div class="answers__prompt">
+                                    Например, необходимость наблюдаться у разных врачей; возможные нарушения здоровья,
+                                    вероятность нарушения когнитивных способностей; вероятность передачи заболевания по
+                                    наследству
+                                </div>
+                                <div class="answers__info">
+                                    <p>
+                                        Пояснили некоторые из возможных аспектов заболевания, но без подробностей
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Какие симптомы и проявления заболевания присутствуют у Вас на сегодняшний день?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>
+                                            Пятна цвета «кофе с молоком»
+                                        </li>
+                                        <li>
+                                            Гиперпигментация
+                                        </li>
+                                        <li>
+                                            Узелки Лиша
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Присутствуют ли у Вас другие проявления нейрофиброматоза 1 типа?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>Трудности социального взаимодействия / трудности с обучением</li>
+                                        <li>Синдром дефицита внимания (СДВГ)</li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Установлена ли Вам инвалидность?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Да, но не связана с нейрофиброматозом
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Какая у вас группа инвалидности?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Ребенок-инвалид
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Проводились ли Вам операции по удалению опухолевых образований, характерных для
+                                    нейрофиброматоза?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>Удаление плексиформных фибром</li>
+                                        <li>Удаление фибром</li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Было ли у Вас диагностировано онкологическое заболевание?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Да, доброкачественная опухоль
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Дефицит каких специалистов в рамках лечения нейрофиброматоза Вы испытываете?
+                                </h3>
+                                <div class="answers__prompt">
+                                    Например, в связи с территориальной удаленностью, высокой стоимостью услуг,
+                                    отсутствием знаний о нейрофиброматозе и т.д.
+                                </div>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>Невролог</li>
+                                        <li>Дерматолог</li>
+                                        <li>Психолог</li>
+                                        <li>Дефектолог</li>
+                                        <li>Педиатр</li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Что является основной причиной невозможности обратиться к указанному специалисту?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>Территориальная удаленность</li>
+                                        <li>Высокая стоимость услуг</li>
+                                        <li>Отсутствие у доступных врачей опыта работы с пациентами с нейрофиброматозом
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Дефицит какой информации о заболевании Вы испытываете?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>
+                                            О методах лечения
+                                        </li>
+                                        <li>
+                                            О перспективных исследованиях
+                                        </li>
+                                        <li>
+                                            О центрах, оказывающих комплексную поддержку при нейрофиброматозе
+                                        </li>
+                                        <li>
+                                            О вариантах лечения за рубежом
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Какая проблема при нейрофиброматозе, на Ваш взгляд, стоит наиболее остро и наиболее
+                                    ярко выражена?
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>
+                                            Нехватка врачей, знакомых с проявлениями заболевания
+                                        </li>
+                                        <li>
+                                            Нехватка информации о заболевании и методах лечения его симптомов
+                                        </li>
+                                        <li>
+                                            Нехватка лекарственных препаратов для лечения проявлений нейрофиброматоза
+                                        </li>
+                                        <li>
+                                            Психологические аспекты жизни с нейрофиброматозом
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    С каким вопросом по нейрофиброматозу Вы обращались в зарубежные клиники?
+                                    <span>Почему Вам не смогли помочь в России?</span>
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Комплекс отражает интеллект. Гендер абсурдно отталкивает контраст. Аутизм притягивает интеракционизм. Роль непоследовательно представляет собой депрессивный бихевиоризм. Онтогенез речи, несмотря на внешние воздействия, непоследовательно притягивает гендер. 
+                                    </p>
+                                    <p>
+                                        Действие дает стресс. Самонаблюдение дает интеллект, независимо от психического состояния пациента.
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Назначались ли Вам медикаменты в связи с проявлениями нейрофиброматоза?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Да
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Какие медикаменты в связи с проявлениями нейрофиброматоза Вам назначались?
+                                </h3>
+                                <div class="answers__prompt">
+                                    Подсказка к вопросу
+                                </div>
+
+                                <div class="answers__info">
+                                    <div class="answers__info-item">
+                                        <div class="answers__line">
+                                            <span>Название препарата:</span>
+                                            Лекарственный препарат 1
+                                        </div>
+                                        <div class="answers__line">
+                                            <span>Для лечения симптома(-ов):</span>
+                                            Самонаблюдение дает интеллект, независимо от психического состояния пациента. 
+                                        </div>
+                                        <div class="answers__line">
+                                            <span>Результат терапии:</span>
+                                            Коллективное бессознательное однократно. Представленный контент-анализ является психолингвистическим в своей основе, таким образом сознание интегрирует опасный стресс, так, например, Ричард Бендлер для построения эффективных состояний использовал изменение субмодальностей. 
+                                        </div>
+                                    </div>
+                                    <div class="answers__info-item">
+                                        <div class="answers__line">
+                                            <span>Название препарата:</span>
+                                            Лекарственный препарат 2
+                                        </div>
+                                        <div class="answers__line">
+                                            <span>Для лечения симптома(-ов):</span>
+                                            Самонаблюдение дает интеллект, независимо от психического состояния пациента. 
+                                        </div>
+                                        <div class="answers__line">
+                                            <span>Результат терапии:</span>
+                                            Комплекс отражает интеллект. Гендер абсурдно отталкивает контраст. Аутизм притягивает интеракционизм. Роль непоследовательно представляет собой депрессивный бихевиоризм. Онтогенез речи, несмотря на внешние воздействия, непоследовательно притягивает гендер.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Запрещал ли Ваш лечащий врач что-либо из следующего:
+                                </h3>
+                                <div class="answers__info">
+                                    <ul>
+                                        <li>
+                                            Прививки
+                                        </li>
+                                        <li>
+                                            Физические нагрузки / ЛФК
+                                        </li>
+                                        <li>
+                                            Массаж
+                                        </li>
+                                        <li>
+                                            Нахождение на солнце
+                                        </li>
+                                        <li>
+                                            Физиотерапия
+                                        </li>
+                                        <li>
+                                            Витамины группы B
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="answers__item">
+                                <h3 class="answers__title">
+                                    Из каких источников (СМИ, сайты, организации) Вы получили / получаете информацию о нейрофиброматозе?
+                                </h3>
+                                <div class="answers__info">
+                                    <p>
+                                        Название источника 1, Название источника 2, Название источника 3
+                                    </p>
+                                </div>
+                                <a class="answers__icon" href="#">
+                                    <svg width="16" height="16">
+                                        <use href=" images/sprite.svg#pencil"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- футер -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <button class="footer__btn js_btn_up" type="button">
+                        <svg width="16" height="18">
+                            <use href=" images/sprite.svg#arrow-up"></use>
+                        </svg>
+                    </button>
+                    <div class="footer__item footer__item-faq">
+                        <a class="footer__faq" href="#">Вопросы и ответы</a>
+                    </div>
+                    <div class="footer__item footer__item-privacy">
+                        <a class="footer__faq" href="#">Политика обработки персональных данных</a>
+                    </div>
+                    <div class="footer__item footer__item-email">
+                        <a class="footer__contact" href="mailto:info@nf2217.ru">info@nf2217.ru</a>
+                    </div>
+                    <div class="footer__item footer__item-address">
+                        <address class="footer__contact">141021, г. Мытищи, Московская область, ул. Юбилейная, д.4,
+                            кв.160</address>
+                    </div>
+                    <div class="footer__item footer__item-copy">
+                        2021. МРОО «22/17»
+                    </div>
+                    <div class="footer__item footer__item-social">
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="7" height="16">
+                                <use href=" images/sprite.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="18" height="10">
+                                <use href=" images/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="12">
+                                <use href=" images/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="16">
+                                <use href=" images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="14">
+                                <use href=" images/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__item footer__item-author">
+                        <a class="footer__author" href="https://nologostudio.ru" target="_blank">Разработка сайта:
+                            nologostudio.ru</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- куки -->
+         <div class="cookies animate-modal active">
+            <div class="cookies__text">
+                Мы используем файлы cookie, чтобы улучшить работу и повысить эффективность сайта. Продолжая использовать
+                сайт, вы соглашаетесь с <a href="#">условиями использования файлов cookie.</a>
+            </div>
+            <button class="cookies__btn js_btn_close" type="button">
+                <svg width="10" height="10">
+                    <use href=" images/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

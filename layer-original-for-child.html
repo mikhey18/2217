@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/17</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__logo logo">
+                            <a class="logo__img" href="index.html">
+                                <img src="images/logo.svg" alt="Лого">
+                            </a>
+                            <div class="logo__text">
+                                <span>Регистр пациентов</span>
+                                с нейрофиброматозом
+                            </div>
+                        </div>
+
+                        <!-- навигационное меню -->
+                        <!-- чтобы получить залогиненное состояние страницы, надо добавить класс log-in к элементам menu и breadcrumbs-->
+                        <div class="menu log-in">
+                            <div class="menu__overlay js_menu_overlay"></div>
+                            <nav class="menu__block">
+                                <div class="menu__logo logo">
+                                    <a class="logo__img" href="index.html">
+                                        <img src="images/logo.svg" alt="Лого">
+                                    </a>
+                                    <div class="logo__text">
+                                        <span>Регистр пациентов</span>
+                                        с нейрофиброматозом
+                                    </div>
+                                </div>
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a class="menu__link active" href="#">Мои данные</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Пациенты</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link menu__link-support" href="#">
+                                            Обращения в поддержку
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link menu__link-exit" href="#">
+                                            <svg width="18" height="20">
+                                                <use href=" images/sprite.svg#exit"></use>
+                                            </svg>
+                                            Выйти
+                                        </a>
+                                    </li>
+                                    <li class="menu__item menu__item-login">
+                                        <a class="menu__link menu__link-login" href="#">
+                                            <svg width="20" height="20">
+                                                <use href=" images/sprite.svg#user"></use>
+                                            </svg>
+                                            Личный кабинет
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <button class="hamburger js_hamburger" type="button">
+                            <span class="hamburger__line"></span>
+                        </button>
+                    </div>
+                    <div class="header__block">
+
+                        <!-- xлебные крошки -->
+                        <!-- чтобы получить залогиненное состояние страницы, надо добавить класс log-in к элементам menu и breadcrumbs-->
+                        <div class="breadcrumbs log-in">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><span class="breadcrumbs__link">Личный кабинет</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="header__title">Пациенты</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="data section">
+            <div class="container">
+                <div class="inner">
+                    <div class="data__content content">
+                        <div class="data__block">
+                            <h2 class="data__title">Моя анкета пациента</h2>
+                            <div class="data__item">
+                                <h3 class="data__name">
+                                    Александра Владимировна Христорождественская
+                                </h3>
+                                <div class="data__info">
+                                    <div class="data__col data__col-date">
+                                        <div class="data__col-title">Дата рождения</div>
+                                        <time class="data__col-content">
+                                            01.01.1980
+                                        </time>
+                                    </div>
+                                    <div class="data__col data__col-address">
+                                        <div class="data__col-title">Место жительства</div>
+                                        <address class="data__col-content">
+                                            Россия, Петропавловск-Камчатский
+                                        </address>
+                                    </div>
+                                    <div class="data__col data__col-discharge">
+                                        <div class="data__check">
+                                            Выписка с диагнозом
+                                        </div>
+                                    </div>
+                                    <div class="data__col data__col-original">
+                                        <!-- для того чтобы иконка сменилась с зелёной на красную, надо добавить класс warning -->
+                                        <!-- для того чтобы по клику на блок появилось модальное окно, блоку нужно добавить класс js_data_warning_me -->
+                                        <div class="data__check">
+                                            Оригинал согласия на обработку персональных данных
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data__line">
+                                    <div class="data__line-title">Вопросы регистра</div>
+                                    <div class="data__progress js_data_progress">
+                                        0%
+                                        <span class="js_data_progress_val" style="width: 0;"></span>
+                                    </div>
+                                    <a class="data__link" href="#">Внести данные</a>
+                                </div>
+                                <div class="data__line">
+                                    <div class="data__line-title">Качество лечения</div>
+                                    <div class="data__progress js_data_progress">
+                                        0%
+                                        <span class="js_data_progress_val" style="width: 0;"></span>
+                                    </div>
+                                    <a class="data__link" href="#">Пройти опрос</a>
+                                </div>
+                                <div class="data__box">
+                                    <a class="data__icon data__icon-editing" href="#">
+                                        <svg width="16" height="16">
+                                            <use href=" images/sprite.svg#pencil"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="data__icon data__icon-deletion" href="#">
+                                        <svg width="14" height="16">
+                                            <use href=" images/sprite.svg#basket"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="data__block">
+                            <h2 class="data__title">Дети</h2>
+                            <div class="data__text">
+                                Если у Вас на попечении есть несовершеннолетний ребенок с нейрофиброматозом или
+                                шванноматозом, добавьте его анкету пациента
+                            </div>
+                            <div class="data__item">
+                                <h3 class="data__name">
+                                    Валерия Ивановна Христорождественская
+                                </h3>
+                                <div class="data__info">
+                                    <div class="data__col data__col-date">
+                                        <div class="data__col-title">Дата рождения</div>
+                                        <time class="data__col-content">
+                                            02.02.2020
+                                        </time>
+                                    </div>
+                                    <div class="data__col data__col-address">
+                                        <div class="data__col-title">Место жительства</div>
+                                        <address class="data__col-content">
+                                            Россия, Петропавловск-Камчатский
+                                        </address>
+                                    </div>
+                                    <div class="data__col data__col-discharge">
+                                        <div class="data__check">
+                                            Выписка с диагнозом
+                                        </div>
+                                    </div>
+                                    <div class="data__col data__col-original">
+                                        <!-- для того чтобы иконка сменилась с зелёной на красную, надо добавить класс warning -->
+                                        <!-- для того чтобы по клику на блок появилось модальное окно, блоку нужно добавить класс js_data_warning_child -->
+                                        <div class="data__check warning js_data_warning_child">
+                                            Оригинал согласия на обработку персональных данных
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data__line">
+                                    <div class="data__line-title">Вопросы регистра</div>
+                                    <div class="data__progress js_data_progress">
+                                        100%
+                                        <span class="js_data_progress_val" style="width: 100%;"></span>
+                                    </div>
+                                    <a class="data__link" href="#">Посмотреть ответы</a>
+                                </div>
+                                <div class="data__line">
+                                    <div class="data__line-title">Качество лечения</div>
+                                    <div class="data__progress js_data_progress">
+                                        0%
+                                        <span class="js_data_progress_val" style="width: 0;"></span>
+                                    </div>
+                                    <a class="data__link" href="#">Пройти опрос</a>
+                                </div>
+                                <div class="data__box">
+                                    <a class="data__icon data__icon-editing" href="#">
+                                        <svg width="16" height="16">
+                                            <use href=" images/sprite.svg#pencil"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="data__icon data__icon-deletion" href="#">
+                                        <svg width="14" height="16">
+                                            <use href=" images/sprite.svg#basket"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="data__item">
+                                <h3 class="data__name">
+                                    Иннокентий Константинович Константинопольский
+                                </h3>
+                                <div class="data__info">
+                                    <div class="data__col data__col-date">
+                                        <div class="data__col-title">Дата рождения</div>
+                                        <time class="data__col-content">
+                                            02.02.2020
+                                        </time>
+                                    </div>
+                                    <div class="data__col data__col-address">
+                                        <div class="data__col-title">Место жительства</div>
+                                        <address class="data__col-content">
+                                            Другая страна (не Россия)
+                                        </address>
+                                    </div>
+                                    <div class="data__col data__col-discharge">
+                                        <!-- для того чтобы иконка сменилась с зелёной на серую, надо добавить класс question -->
+                                        <div class="data__check question">
+                                            Выписка с диагнозом
+                                        </div>
+                                    </div>
+                                    <div class="data__col data__col-original">
+                                        <!-- для того чтобы иконка сменилась с зелёной на красную, надо добавить класс warning -->
+                                        <!-- для того чтобы по клику на блок появилось модальное окно, блоку нужно добавить класс js_data_warning_child -->
+                                        <div class="data__check warning js_data_warning_child">
+                                            Оригинал согласия на обработку персональных данных
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data__line">
+                                    <div class="data__line-title">Вопросы регистра</div>
+                                    <div class="data__progress js_data_progress">
+                                        48%
+                                        <span class="js_data_progress_val" style="width: 48%;"></span>
+                                    </div>
+                                    <a class="data__link" href="#">Посмотреть ответы</a>
+                                </div>
+                                <div class="data__line">
+                                    <div class="data__line-title">Качество лечения</div>
+                                    <div class="data__progress js_data_progress">
+                                        0%
+                                        <span class="js_data_progress_val" style="width: 0;"></span>
+                                    </div>
+                                    <a class="data__link" href="#">Пройти опрос</a>
+                                </div>
+                                <div class="data__box">
+                                    <a class="data__icon data__icon-editing" href="#">
+                                        <svg width="16" height="16">
+                                            <use href=" images/sprite.svg#pencil"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="data__icon data__icon-deletion" href="#">
+                                        <svg width="14" height="16">
+                                            <use href=" images/sprite.svg#basket"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="data__link-block link-block" href="#">
+                                <svg width="30" height="30">
+                                    <use href=" images/sprite.svg#plus"></use>
+                                </svg>
+                                Добавить ребенка
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- модальное окно 'согласие на обработку персональных данных ребёнка' -->
+        <div class="modal animate-modal active js_modal_data_child">
+            <div class="modal__window">
+                <div class="modal__title">Важная информация</div>
+                <div class="modal__text">
+                    <p>
+                        В соответствии с ст. 9 и 10 ФЗ-152 мы обязаны получить Ваше письменное согласие на обработку персональных данных ребенка.
+                    </p>
+                    <p>
+                        Если мы не получим оригинал Вашего согласия в течение 90 дней, мы будем вынуждены удалить данные ребенка из регистра и не сможем связаться с Вами в случае необходимости.
+                    </p>
+                    <p>
+                        Просим Вас скачать, распечатать и подписать согласие на обработку персональных данных и прислать нам его на почтовый адрес: 141021, г. Мытищи, Московская область, ул. Юбилейная, д.4, кв.160.
+                    </p>
+                </div>
+                <a class="modal__download" href="" download>
+                    Согласие на обработку персональных данных.doc
+                    <span>386 Кб</span>
+                    <svg width="24" height="32">
+                        <use href=" images/sprite.svg#list"></use>
+                    </svg>
+                </a>
+                <button class="modal__exit js_btn_close" type="button">
+                    <svg width="14" height="14">
+                        <use href=" images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- футер -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <button class="footer__btn js_btn_up" type="button">
+                        <svg width="16" height="18">
+                            <use href=" images/sprite.svg#arrow-up"></use>
+                        </svg>
+                    </button>
+                    <div class="footer__item footer__item-faq">
+                        <a class="footer__faq" href="#">Вопросы и ответы</a>
+                    </div>
+                    <div class="footer__item footer__item-privacy">
+                        <a class="footer__faq" href="#">Политика обработки персональных данных</a>
+                    </div>
+                    <div class="footer__item footer__item-email">
+                        <a class="footer__contact" href="mailto:info@nf2217.ru">info@nf2217.ru</a>
+                    </div>
+                    <div class="footer__item footer__item-address">
+                        <address class="footer__contact">141021, г. Мытищи, Московская область, ул. Юбилейная, д.4,
+                            кв.160</address>
+                    </div>
+                    <div class="footer__item footer__item-copy">
+                        2021. МРОО «22/17»
+                    </div>
+                    <div class="footer__item footer__item-social">
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="7" height="16">
+                                <use href=" images/sprite.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="18" height="10">
+                                <use href=" images/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="12">
+                                <use href=" images/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="16">
+                                <use href=" images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="14">
+                                <use href=" images/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__item footer__item-author">
+                        <a class="footer__author" href="https://nologostudio.ru" target="_blank">Разработка сайта:
+                            nologostudio.ru</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

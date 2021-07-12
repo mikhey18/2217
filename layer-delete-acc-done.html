@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/17</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <section class="page">
+        <div class="container">
+            <div class="page__inner">
+
+                <!-- форма авторизации -->
+                <div class="form">
+                    <div class="form__header">
+                        <a class="form__logo" href="index.html">
+                            <img src="images/logo.svg" alt="Лого">
+                        </a>
+                        <div class="form__desc">
+                            <span>Регистр пациентов</span>
+                            с нейрофиброматозом
+                        </div>
+                    </div>
+                    <h1 class="form__title">Вход в личный кабинет</h1>
+
+                     <!-- для того чтобы скрыть форму нужно добавить добавить класс hide нижестоящему блоку (форме) -->
+                    <form class="form__inner js_login_form">
+                        <div class="form__line field">
+                            <input class="field__input" type="text" required name="email">
+                            <span>E-mail *</span>
+                        </div>
+                        <div class="form__line field">
+                            <button class="field__btn js_show_pass_btn" type="button"></button>
+                            <input class="field__input field__input-password" type="password" required name="password">
+                            <span>Пароль *</span>
+                        </div>
+                        <a class="form__recovery-link" href="pass-recovery.html">Забыли пароль?</a>
+                        <button class="form__button btn btn--wide" type="submit">Войти</button>
+                        <div class="form__question">
+                            У Вас ещё нет аккаунта?
+                            <a class="form__question-link" href="registration.html">Зарегистрироваться</a>
+                        </div>
+                    </form>
+
+                    <!-- для того чтобы показать текст, сообщающий о временной блокировке, нужно добавить класс active нижестоящему блоку -->
+                    <div class="form__text">
+                        <p>
+                            Слишком много неверных попыток. <br>
+                            Доступ заблокирован на 60 минут. Попробуйте позже
+                        </p>
+                    </div>
+                </div>
+
+                <!-- описание регистра -->
+                <div class="desc">
+                    <h2 class="desc__title">Для кого этот регистр?</h2>
+                    <div class="desc__text">
+                        <p>
+                            Если у Вас или Вашего ребенка есть нейрофиброматоз или шванноматоз, Вы можете помочь нам
+                            собрать достоверную информацию о текущей ситуации с заболеванием.
+                        </p>
+                        <p>
+                            Предоставленные данные помогут собрать статистику по заболеванию и организовать дальнейшую
+                            работу для предоставления помощи пациентам.
+                        </p>
+                        <p>
+                            Вы первыми будете получать информацию о программах раннего доступа к препаратам
+                            и pпоявлении
+                            новых методов лечения, о мероприятиях и вебинарах о НФ.
+                        </p>
+                        <p>
+                            Подробнее о регистре пациентов смотрите раздел
+                            <a href="#">Вопросы и Ответы</a>
+                        </p>
+                    </div>
+                    <img class="desc__img" src="images/dna.svg" alt="Днк">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- модальное окно -->
+    <div class="modal modal--middle animate-modal active">
+        <div class="modal__window">
+            <div class="modal__title">Удалить аккаунт</div>
+            <div class="modal__text">
+                <p>
+                    Все Ваши данные, включая все анкеты пациентов и данные пройденных опросов успешно удалены.
+                </p>
+            </div>
+            <button class="modal__exit js_btn_close" type="button">
+                <svg width="14" height="14">
+                    <use href=" images/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

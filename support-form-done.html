@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/17</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__logo logo">
+                            <a class="logo__img" href="index.html">
+                                <img src="images/logo.svg" alt="Лого">
+                            </a>
+                            <div class="logo__text">
+                                <span>Регистр пациентов</span>
+                                с нейрофиброматозом
+                            </div>
+                        </div>
+
+                        <!-- навигационное меню -->
+                        <!-- чтобы получить залогиненное состояние страницы, надо добавить класс log-in к элементам menu и breadcrumbs-->
+                        <div class="menu log-in">
+                            <div class="menu__overlay js_menu_overlay"></div>
+                            <nav class="menu__block">
+                                <div class="menu__logo logo">
+                                    <a class="logo__img" href="index.html">
+                                        <img src="images/logo.svg" alt="Лого">
+                                    </a>
+                                    <div class="logo__text">
+                                        <span>Регистр пациентов</span>
+                                        с нейрофиброматозом
+                                    </div>
+                                </div>
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Мои данные</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Пациенты</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link menu__link-support active" href="#">
+                                            Обращения в поддержку
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link menu__link-exit" href="#">
+                                            <svg width="18" height="20">
+                                                <use href=" images/sprite.svg#exit"></use>
+                                            </svg>
+                                            Выйти
+                                        </a>
+                                    </li>
+                                    <li class="menu__item menu__item-login">
+                                        <a class="menu__link menu__link-login" href="#">
+                                            <svg width="20" height="20">
+                                                <use href=" images/sprite.svg#user"></use>
+                                            </svg>
+                                            Личный кабинет
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <button class="hamburger js_hamburger" type="button">
+                            <span class="hamburger__line"></span>
+                        </button>
+                    </div>
+                    <div class="header__block">
+
+                        <!-- xлебные крошки -->
+                        <!-- чтобы получить залогиненное состояние страницы, надо добавить класс log-in к элементам menu и breadcrumbs-->
+                        <div class="breadcrumbs log-in">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Личный кабинет</a>
+                                </li>
+                                <li class="breadcrumbs__item"><span class="breadcrumbs__link">Обращения в
+                                        поддержку</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="header__title">Новое обращение</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="support-form section">
+            <div class="container">
+                <div class="inner">
+                    <div class="support-form__content content">
+
+                        <!-- для того чтобы скрыть этот блок, нужно добавить класс hide -->
+                        <form class="support-form__form js_support_form hide">
+                            <div class="support-form__field field">
+                                <input class="field__input" type="text" required name="theme">
+                                <span>Тема</span>
+                            </div>
+                            <div class="support-form__field field">
+                                <textarea class="field__area" required name="message"></textarea>
+                                <span>Ваше сообщение</span>
+                            </div>
+                            <div class="support-form__bottom">
+                                <div class="support-form__upload upload">
+                                    <label class="upload__field">
+                                        <input class="upload__input" type="file">
+                                        <span>Прикрепить файл</span>
+                                    </label>
+                                    <div class="upload__desc">
+                                        <span>
+                                            Макс. размер: 10 MB
+                                        </span>
+                                        <span>
+                                            Макс. количество файлов: 10
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="support-form__btn btn" type="submit">Отправить</button>
+                            </div>
+                        </form>
+
+                        <!-- для того чтобы показать текст после успешной отправки формы, нужно добавить класс active нижестоящему блоку -->
+                        <div class="support-form__success js_support_form_success active">
+                            <h2 class="support-form__title">Ваше сообщение отправлено</h2>
+                            <div class="support-form__text">
+                                Мы ответим вам в ближайшее время.<br>
+                                Список Ваших обращений доступен на странице
+                                <a href="#">Обращения в поддержку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- футер -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <button class="footer__btn js_btn_up" type="button">
+                        <svg width="16" height="18">
+                            <use href=" images/sprite.svg#arrow-up"></use>
+                        </svg>
+                    </button>
+                    <div class="footer__item footer__item-faq">
+                        <a class="footer__faq" href="#">Вопросы и ответы</a>
+                    </div>
+                    <div class="footer__item footer__item-privacy">
+                        <a class="footer__faq" href="#">Политика обработки персональных данных</a>
+                    </div>
+                    <div class="footer__item footer__item-email">
+                        <a class="footer__contact" href="mailto:info@nf2217.ru">info@nf2217.ru</a>
+                    </div>
+                    <div class="footer__item footer__item-address">
+                        <address class="footer__contact">141021, г. Мытищи, Московская область, ул. Юбилейная, д.4,
+                            кв.160</address>
+                    </div>
+                    <div class="footer__item footer__item-copy">
+                        2021. МРОО «22/17»
+                    </div>
+                    <div class="footer__item footer__item-social">
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="7" height="16">
+                                <use href=" images/sprite.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="18" height="10">
+                                <use href=" images/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="12">
+                                <use href=" images/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="16">
+                                <use href=" images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__social" href="#" target="_blank">
+                            <svg width="16" height="14">
+                                <use href=" images/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__item footer__item-author">
+                        <a class="footer__author" href="https://nologostudio.ru" target="_blank">Разработка сайта:
+                            nologostudio.ru</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/17</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <section class="page">
+        <div class="container">
+            <div class="page__inner">
+
+                <!-- форма восстановления пароля -->
+                <div class="form">
+                    <div class="form__header">
+                        <a class="form__logo" href="index.html">
+                            <img src="images/logo.svg" alt="Лого">
+                        </a>
+                        <div class="form__desc">
+                            <span>Регистр пациентов</span>
+                            с нейрофиброматозом
+                        </div>
+                    </div>
+                    <h1 class="form__title">Восстановление пароля</h1>
+
+                    <!-- для того чтобы скрыть форму нужно добавить добавить класс hide нижестоящему блоку (форме) -->
+                    <form class="form__inner js_recovery_form">
+                        <div class="form__recovery-text">
+                            Если вы забыли пароль, введите свой E-Mail. Мы отправим вам письмо с инструкцией по
+                            восстановлению пароля
+                        </div>
+
+                        <!-- для изменения цвета input на цвет ошибки нужно элементу field добавить класс error -->
+                        <div class="form__line field">
+                            <input class="field__input" type="text" required name="email">
+                            <span>E-mail *</span>
+
+                            <!-- для появления следующего сообщения об ошибке нужно добавить класс active -->
+                            <div class="field__error">
+                                Пользователь с такой эл. почтой не найден
+                            </div>
+                        </div>
+                        <button class="form__button btn btn--wide" type="submit">Восстановить пароль</button>
+                        <div class="form__question">
+                            <a class="form__question-link" href="login.html">Вспомнил пароль</a>
+                        </div>
+                    </form>
+
+                    <!-- для того чтобы показать текст после успешной отправки формы, нужно добавить класс active нижестоящему блоку -->
+                    <div class="form__text js_form_text">
+                        <p>
+                            На адрес <span>aleksandrа@example.com</span> было отправлено письмо.
+                        </p>
+                        <p>
+                            Для восстановления пароля перейдите по ссылке из письма.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- куки -->
+     <div class="cookies animate-modal active">
+        <div class="cookies__text">
+            Мы используем файлы cookie, чтобы улучшить работу и повысить эффективность сайта. Продолжая использовать
+            сайт, вы соглашаетесь с <a href="#">условиями использования файлов cookie.</a>
+        </div>
+        <button class="cookies__btn js_btn_close" type="button">
+            <svg width="10" height="10">
+                <use href=" images/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

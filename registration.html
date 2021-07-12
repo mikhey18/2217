@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/17</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <section class="page">
+        <div class="container">
+            <div class="page__inner">
+
+                <!-- форма регистрации -->
+                <div class="form">
+                    <div class="form__header">
+                        <a class="form__logo" href="index.html">
+                            <img src="images/logo.svg" alt="Лого">
+                        </a>
+                        <div class="form__desc">
+                            <span>Регистр пациентов</span>
+                            с нейрофиброматозом
+                        </div>
+                    </div>
+                    <h1 class="form__title">Регистрация</h1>
+
+                    <!-- для того чтобы скрыть форму нужно добавить добавить класс hide нижестоящему блоку (форме) -->
+                    <form class="form__inner js_registration_form">
+
+                        <!-- для изменения цвета input на цвет ошибки нужно элементу field добавить класс error -->
+                        <div class="form__line field">
+                            <input class="field__input" type="text" required name="email">
+                            <span>E-mail *</span>
+
+                            <!-- для появления следующего сообщения об ошибке нужно добавить класс active -->
+                            <div class="field__error">
+                                Пользователь с такой эл. почтой уже есть в системе.
+                                <a href="#">Восстановить доступ?</a>
+                            </div>
+                        </div>
+                        <div class="form__line field">
+                            <button class="field__btn js_show_pass_btn" type="button"></button>
+                            <input class="field__input field__input-password js_password" type="password" required
+                                name="password">
+                            <span>Пароль *</span>
+                        </div>
+                        <div class="form__line field">
+                            <button class="field__btn js_show_pass_btn" type="button"></button>
+                            <input class="field__input field__input-password" type="password" required
+                                name="password_again">
+                            <span>Повторите пароль *</span>
+                        </div>
+                        <div class="form__privacy checkbox">
+                            <label class="checkbox__label js_checkbox_label">
+                                <input class="checkbox__input" type="checkbox" name="check">
+                                <span>
+                                    Согласен(-а) на
+                                    <a class="form__privacy-link" href="#">обработку персональных данных</a>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="form__button btn btn--wide" type="submit">Зарегистрироваться</button>
+                        <div class="form__question">
+                            Уже зарегистрированы?
+                            <a class="form__question-link" href="login.html">Войти</a>
+                        </div>
+                    </form>
+
+                    <!-- для того чтобы показать текст после успешной регистрации нужно добавить класс active нижестоящему блоку -->
+                    <div class="form__text js_form_text">
+                        <p>
+                            На адрес <span>aleksandrа@example.com</span> было отправлено письмо.
+                        </p>
+                        <p>
+                            Чтобы завершить регистрацию, перейдите по ссылке из письма.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- описание регистра -->
+                <div class="desc">
+                    <h2 class="desc__title">Для кого этот регистр?</h2>
+                    <div class="desc__text">
+                        <p>
+                            Если у Вас или Вашего ребенка есть нейрофиброматоз или шванноматоз, Вы можете помочь нам
+                            собрать достоверную информацию о текущей ситуации с заболеванием.
+                        </p>
+                        <p>
+                            Предоставленные данные помогут собрать статистику по заболеванию и организовать дальнейшую
+                            работу для предоставления помощи пациентам.
+                        </p>
+                        <p>
+                            Вы первыми будете получать информацию о программах раннего доступа к препаратам
+                            и появлении
+                            новых методов лечения, о мероприятиях и вебинарах о НФ.
+                        </p>
+                        <p>
+                            Подробнее о регистре пациентов смотрите раздел
+                            <a href="#">Вопросы и Ответы</a>
+                        </p>
+                    </div>
+                    <img class="desc__img" src="images/dna.svg" alt="Днк">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- куки -->
+    <div class="cookies animate-modal active">
+        <div class="cookies__text">
+            Мы используем файлы cookie, чтобы улучшить работу и повысить эффективность сайта. Продолжая использовать
+            сайт, вы соглашаетесь с <a href="#">условиями использования файлов cookie.</a>
+        </div>
+        <button class="cookies__btn js_btn_close" type="button">
+            <svg width="10" height="10">
+                <use href=" images/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
