@@ -1,0 +1,150 @@
+.form {
+    width: 460px;
+    background-color: #fff;
+    padding: 15px 0 60px;
+    @media (min-width: 480px) {
+        min-height: 650px;
+        padding: 35px 40px 40px;
+    }
+    @media (min-width: 1024px) {
+        padding: 35px 60px 40px;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    &__logo {
+        img {
+            height: 50px;
+        }
+    }
+    &__desc {
+        color: $gray;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        margin-left: 13px;
+        padding-bottom: 3px;
+        @media (min-width: 480px) {
+            font-size: 13px;
+            line-height: 15px;
+        }
+        span {
+            display: block;
+            color: $main;
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 500;
+            margin-bottom: 2px;
+            @media (min-width: 480px) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+    &__title {
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        @media (min-width: 480px) {
+            font-size: 24px;
+        }
+    }
+    &__inner {
+        &.hide {
+            display: none;
+        }
+    }
+    &__line {
+        & + & {
+            margin-top: 20px;
+            @media (min-width: 480px) {
+                margin-top: 30px;
+            }
+        }
+    }
+    &__button {
+        margin: 30px 0 20px;
+    }
+    &__question {
+        color: $gray;
+        text-align: center;
+        font-size: 14px;
+        @media (min-width: 480px) {
+            font-size: 15px;
+        }
+    }
+    &__recovery-link {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    &__text {
+        display: none;
+        p { 
+            color: $gray;
+            font-size: 14px;
+            @media (min-width: 480px) {
+                font-size: 15px;
+            }
+        }
+        p + p {
+            margin-top: 20px;
+        }
+        &.active {
+            display: block;
+        }
+        span {
+            font-weight: 500;
+        }
+    }
+    &__recovery-text {
+        color: $gray;
+        font-size: 14px;
+        margin-bottom: 30px;
+        @media (min-width: 480px) {
+            font-size: 15px;
+        }
+    }
+}
+
+.form__privacy {
+    margin-top: 20px;
+    @media (min-width: 480px) {
+        margin-top: 30px;
+    }
+    &-link {
+        display: inline;
+    }
+}
+
+.form__captcha {
+    display: none;
+    margin-top: 30px;
+    &.active {
+        display: block;
+    }
+    &-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &-img {
+        img {
+            width: 180px;
+        }
+    }
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #F5F6F8;
+        border: 1px solid #E6E6E6;
+        border-radius: 4px;
+        margin-left: 20px;
+    }
+    &-field {}
+}

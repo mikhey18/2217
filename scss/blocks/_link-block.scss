@@ -1,0 +1,19 @@
+.link-block {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    background: #F5F6F8;
+    border: 1px solid #E6E6E6;
+    padding: 14px 15px;
+    svg {
+        margin-right: 15px;
+        @media (min-width: 640px) {
+            margin-right: 20px
+        }
+    }
+    @media (min-width: 640px) {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+}

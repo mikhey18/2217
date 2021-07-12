@@ -1,0 +1,111 @@
+.answers {
+    &__content {
+        padding: 30px 0 22px;
+        @media (min-width: 640px) {
+            padding: 30px 0 10px;
+        }
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        @media (min-width: 640px) {
+            padding: 0 20px;
+        }
+    }
+    &__item {
+        position: relative;
+        border-top: 1px solid #E6E6E6;
+        padding: 20px 50px 20px 20px;
+        margin: 0 -20px;
+        @media (min-width: 640px) {
+            margin: 0;
+            padding: 30px 90px 30px 50px;
+        }
+    }
+    &__title {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        @media (min-width: 640px) {
+            font-size: 16px;
+        }
+        span {
+            display: block;
+        }
+    }
+    &__prompt {
+        color: #999999;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    } 
+    &__info {
+        p, li {
+            color: $gray;
+            font-size: 14px;
+            @media (min-width: 640px) {
+                font-size: 15px;
+            }
+        }
+        p + p {
+            margin-top: 20px;
+        }
+        li {
+            position: relative;
+            padding-left: 24px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 10px;
+                top: 7px;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $gray;
+            }
+        }
+    }
+    &__info-item {
+        & + & {
+            margin-top: 30px;
+        }
+    }
+    &__icon {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        svg {
+            fill: $link;
+        }
+        @media(min-width: 640px) {
+            right: 20px;
+            bottom: 30px;
+        }
+    }
+    &__line {
+        font-size: 15px;
+        color: $gray;
+        padding-right: 20px;
+        @media (min-width: 640px) {
+            display: flex;
+            padding: 0;
+        }
+        span {
+            display: block;
+            color: $main;
+            padding-right: 10px;
+            @media (min-width: 640px) {
+                flex: 0 0 230px;
+            }
+        }
+        & + & {
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+    &__window {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 50px 20px 30px;
+        background-color: #fff;
+        @media (min-width: 640px) {
+            display: block;
+            top: 50%;
+            left: 50%;
+            height: auto;
+            transform: translate(-50%, -50%);
+            max-width: 560px;
+            padding: 50px 60px 40px;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        @media (min-width: 640px) {
+           margin-bottom: 40px;
+        }
+    }
+    &__text {
+        margin-bottom: 10px;
+        p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline;
+            font-size: 15px;
+        }
+        span {
+            display: block;
+            font-weight: 500;
+        }
+        @media (min-width: 640px) {
+            margin-bottom: 40px;
+        }
+    }
+    &__buttons {
+        margin-top: auto;
+        text-align: center;
+        @media (min-width: 640px) {
+            text-align: left;
+        }
+    }
+    &__btn {
+        padding: 14px 20px;
+        &-delete {
+            width: 130px;
+            align-items: center;
+            justify-content: center;
+            color: $link;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            background-color: #fff;
+            padding: 14px 0;
+            margin-bottom: 10px;
+            span {
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+            }
+            svg {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @media (min-width: 640px) {
+                width: 140px;
+            }
+        }
+        & + & {
+            margin-left: 16px;
+        }
+    }
+    &__exit {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+    }
+    &__download {
+        position: relative;
+        padding-left: 40px;
+        color: $main;
+        font-size: 14px;
+        margin-bottom: 10px;
+        span {
+            display: block;
+            color: #999;
+        }
+        svg {
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
+    }
+    &--middle {
+        .modal__window {
+            min-height: 350px;
+        }
+        .modal__text {
+            margin-bottom: 60px;
+        }
+    }
+    &--rejection {
+        .modal__window {
+            padding-bottom: 20px;
+            @media(min-width: 640px) {
+                padding-bottom: 40px;
+            }
+        }
+        .modal__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            @media(min-width: 640px) {
+                justify-content: space-between;
+            }
+        }
+        .modal__btn {
+            padding: 9px;
+        }
+        .btn {
+            width: 78%;
+            font-size: 15px;
+            @media(min-width: 640px) {
+                width: 50%;
+            }
+        }
+        .btn--white {
+            margin-left: 0;
+            margin-top: 20px;
+            @media(min-width: 640px) {
+                width: 45.5%;
+                margin-top: 0;
+            }
+        }
+    }
+}

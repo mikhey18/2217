@@ -1,0 +1,50 @@
+.page-change {
+    &__content {
+        @media (min-width: 780px) {
+            padding-top: 40px;
+        }
+    }
+    &__line {
+        margin-bottom: 30px;
+    }
+    &__form {
+        max-width: 340px;
+        margin: 0 auto;
+        &.hide {
+            display: none;
+        }
+    }
+    &__block-success {
+        display: none;
+        padding: 0 0 20px;
+        text-align: center;
+        @media (min-width: 780px) {
+            padding: 80px 0 20px
+        }
+        &.active {
+            display: block;
+        }
+
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        @media (min-width: 640px) {
+            font-size: 20px;
+        }
+    }
+    &__link {
+        color: $gray;
+        font-size: 15px;
+    }  
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+    }
+    &__btn {
+        width: 47%;
+        padding: 15px;
+    }
+}

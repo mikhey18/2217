@@ -1,0 +1,49 @@
+.radio {
+    &__label {
+        cursor: pointer;
+    }
+    &__input {
+        position: absolute;
+        opacity: 0;
+        &:checked ~ span:before {
+            border-color: $blue;
+        }
+        &:focus ~ span:before {
+            box-shadow: 0 0 0 2px #000;
+        }
+        &:checked ~ span:after {
+            opacity: 1;
+        }
+    }
+    span {
+        position: relative;
+        font-size: 14px;
+        padding-left: 28px;
+        @media (min-width: 640px) {
+            font-size: 15px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid #B3B3B3;
+            transition: .3s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $blue;
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+}

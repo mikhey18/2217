@@ -1,0 +1,43 @@
+.upload {
+    &__field {
+        position: relative;
+        display: inline-block;
+        color: $link;
+        font-size: 15px;
+        padding-left: 34px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 20px;
+            background: url('../images/icons/clip.svg') no-repeat;
+        }
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        &:focus + span {
+            box-shadow: 0 0 0 2px #000;
+        }
+    }
+    &__desc {
+        // margin-top: 10px;
+        padding-left: 34px;
+        span {
+            display: block;
+            color: #999999;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+    &__list {
+        padding-bottom: 20px;
+    }
+}

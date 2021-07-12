@@ -1,0 +1,21 @@
+.btn {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    background-color: $blue;
+    text-align: center;
+    border: 1px solid $blue;
+    border-radius: 4px;
+    &--wide {
+        display: block;
+        width: 100%;
+        padding: 14px;
+    }
+    &--white {
+        color: $link;
+        font-weight: 400;
+        background-color: transparent;
+        border-color: rgba(46, 138, 230, 0.5);
+    }
+}

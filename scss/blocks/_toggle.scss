@@ -1,0 +1,44 @@
+.toggle {
+    display: inline-block;
+    cursor: pointer;
+    span {
+        display: inline-block;
+        position: relative;
+        padding-left: 60px;
+        &::before, 
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 10px
+        }
+        &::before {
+            left: 0;
+            width: 40px;
+            height: 20px;
+            background: #cccccc;
+            transition: .3s;
+        }
+        &::after {
+            width: 16px;
+            height: 16px;
+            left: 2px;
+            background-color: #fff;
+            transition: .3s;
+        }
+    }
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        &:checked + span::before {
+            background-color: #6FCF97;
+        }
+        &:checked + span::after {
+            left: 22px;
+        }
+        &:focus + span::before {
+            box-shadow: 0 0 0 2px #000;
+        }
+    }
+}

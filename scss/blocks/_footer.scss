@@ -1,0 +1,113 @@
+.footer {
+    flex: 0 0 auto;
+    background-color: #EBEDF2;
+    @media (min-width: 780px) {
+        background-color: transparent;
+    }
+	&__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #EBEDF2;
+        margin: 0 -20px;
+        padding: 25px 0 20px 0;
+        @media (min-width: 640px) {
+            padding: 30px 0 0 0;
+        }
+        @media (min-width: 780px) {
+            margin: 0;
+        }
+        @media (min-width: 1024px) {
+            margin-left: auto;
+            width: calc(100% - 280px);
+        }
+    }
+	&__btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+	&__item {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 10px;
+        @media (min-width: 640px) {
+            width: 22%;
+            margin-bottom: 30px;
+        }
+        &-faq {
+            margin-bottom: 20px;
+            @media (min-width: 640px) {
+                margin-bottom: 30px;
+            }
+        }
+        &-privacy,
+        &-address {
+            width: 100%;
+            margin-bottom: 40px;
+            @media (min-width: 640px) {
+                width: 78%;
+                margin-bottom: 30px;
+            }   
+        }
+        &-social,
+        &-author {
+            display: flex;
+            width: 100%;
+            @media (min-width: 640px) {
+                width: 33.5%;
+            }
+        }
+        &-author {
+            margin-left: auto;
+        }
+        &-social {
+            order: -1;
+            margin-bottom: 35px;
+            @media (min-width: 640px) {
+                margin-bottom: 30px;
+                order: 0;
+            }
+        }
+    }
+	&__faq {
+        color: $main;
+        font-size: 14px;
+        @media (min-width: 640px) {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        & + & {
+            margin-left: 10px;
+        }
+    }
+    &__item-copy,
+    &__contact,
+    &__author {
+        color: $gray;
+        font-size: 14px;
+        font-style: normal;
+    }
+    &--hidden {
+        display: none;
+        @media (min-width: 780px) {
+            display: block;
+        }
+    }
+}

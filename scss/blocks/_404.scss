@@ -1,0 +1,47 @@
+.page-404 {
+    &__content {
+        text-align: center;
+        padding-top: 35px;
+        @media (min-width: 640px) {
+            padding-top: 80px;
+        }
+    }
+    &__404 {
+        position: relative;
+        color: #EBEDF2;
+        font-size: 120px;
+        line-height: 100px;
+        font-weight: 300;
+        margin-bottom: 35px;
+        @media (min-width: 640px) {
+            font-size: 200px;
+            line-height: 160px;
+            margin-bottom: 40px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            left: 0;
+            bottom: 0;
+            background: url('../images/404.svg') center bottom/ auto 100% no-repeat;
+            @media (min-width: 640px) {
+                height: 132px;
+            }
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 20px;
+        @media (min-width: 640px) {
+            font-size: 20px;
+        }
+    }
+    &__text {
+        max-width: 660px;
+        color: $gray;
+        margin: 0 auto 20px;
+    }
+}

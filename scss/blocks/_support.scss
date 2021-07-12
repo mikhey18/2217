@@ -1,0 +1,117 @@
+.support {
+    &__content {
+        overflow-x: hidden;
+        padding: 30px 0 0;
+        margin: 0 -20px;
+        @media (min-width: 640px) {
+            padding: 20px 0 40px;
+            margin: 0;
+        }
+    }
+    &__start {
+        position: relative;
+        padding-top: 82px;
+        @media (min-width: 640px) {
+            padding-top: 260px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 54px;
+            background: url('../images/envelope.svg') center center / auto 100% no-repeat;
+            @media (min-width: 640px) {
+                top: 100px;
+                height: 108px;
+            }
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    &__start-text {
+        font-size: 15px;
+        text-align: center;
+    }
+    &__start-link {
+        display: inline;
+    }
+    &__items {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__link-block {
+        margin: 0 20px 20px 20px;
+        @media (min-width: 640px) {
+            margin: 0 0 40px 0;
+        }
+        @media (min-width: 768px) {
+            margin: 0 20px 40px 20px;
+        }
+    }
+    &__item {
+        display: block;
+        border-top: 1px solid #e6e6e6;
+        padding: 20px;
+        @media (min-width: 640px) {
+            margin: 0;
+            padding: 19px 20px 25px 40px;
+        }
+    }
+    &__item-top {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 10px;
+        padding-right: 80px;
+        @media (min-width: 640px) {
+            margin-bottom: 15px;
+            padding-right: 100px;
+        }
+        span {
+            color: $gray;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 500;
+            background-color: #FFDF7E;
+            border-radius: 10px;
+            margin-right: 14px;
+            padding: 0 7px;
+        }
+    }
+    &__item-title {
+        color: $main;
+        font-size: 14px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        @media (min-width: 640px) {
+            font-size: 16px;
+        }
+    }
+    &__item-time {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #999;
+        font-size: 13px;
+        @media (min-width: 640px) {
+            font-size: 14px;
+        }
+    }
+    &__item-text {
+        color: $gray;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        @media (min-width: 640px) {
+            font-size: 15px;
+        }
+    }
+}

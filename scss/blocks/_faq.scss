@@ -1,0 +1,97 @@
+.faq {
+    &__content {
+        padding: 0 0 40px;
+        @media (min-width: 780px) {
+            padding: 0 0 60px;
+        }
+    }
+    &__items {
+        margin: 0 -20px 30px;
+        @media (min-width: 780px) {
+            margin: 0 0 40px;
+        }
+    }
+    &__item {
+        border-bottom: 1px solid #E6E6E6;
+    }
+    &__item-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 80px;
+        padding: 15px 60px 15px 20px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        cursor: pointer;
+        @media (min-width: 640px) {
+            padding: 16px 70px 16px 20px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $link;
+            transition: .3s;
+        }
+        &::before {
+            width: 2px;
+            height: 12px;
+            right: 25px;
+            @media (min-width: 780px) {
+                right: 34px;
+            }
+        }
+        &::after {
+            width: 12px;
+            height: 2px;
+            right: 20px;
+            @media (min-width: 780px) {
+                right: 29px;
+            }
+        }
+        &.active {
+            &::before {
+                height: 0;
+            }
+        }
+    }
+    &__item-text {
+        display: none;
+        padding: 0 20px 20px 20px;
+        @media(min-width: 640px) {
+            padding: 0 120px 20px 20px;
+        }
+        p {
+            color: $gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+            @media(min-width: 640px) {
+                font-size: 15px;
+            }
+        }
+    }
+    &__desc {
+        max-width: 460px;
+        margin: 0 auto 30px;
+        color: $gray;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        @media(min-width: 640px) {
+           margin-bottom: 26px;
+           font-size: 16px;
+           line-height: 22px;
+        }
+    }
+    &__btn {
+        display: block;
+        width: 160px;
+        padding: 14px;
+        margin: 0 auto; 
+    }
+}

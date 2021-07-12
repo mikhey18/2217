@@ -1,0 +1,167 @@
+.policy__content {
+    padding: 30px 0 0;
+    @media (min-width: 780px) {
+        padding: 40px 20px 40px;
+    }
+}
+.policy__block {
+    max-width: 660px;
+    margin: 0 auto;
+    ol {
+        counter-reset: li;
+    }
+    ol li li li {
+        padding-left: 50px;
+    }
+    ol > li {
+        position: relative;
+        &::before {
+            counter-increment: li;
+            content: counters(li, ".") ". ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 500;
+            @media (min-width: 640px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        li {
+            &::before {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+                @media (min-width: 640px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    ul li {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            left: 10px;
+            top: 9px;
+            background-color: $main;
+        }
+    }
+    li {
+        margin-bottom: 40px;
+        li {
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        @media (min-width: 640px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        @media (min-width: 640px) {
+            font-size: 15px;
+        }
+    }
+    ul li,
+    li ul li,
+    li li ul li {
+        padding-left: 24px;
+    }
+}
+
+// стили для модального окна
+
+.policy--modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    .policy__wrapper {
+        max-width: 840px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #fff;
+    }
+    .policy__header,
+    .policy__footer {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        padding: 0 20px;
+        @media (min-width: 480px) {
+            padding: 0 40px;
+        }
+        @media (min-width: 640px) {
+            height: 80px
+        }
+    }
+    .policy__header {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        border-bottom: 1px solid #E6E6E6;
+        @media (min-width: 640px) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+    .policy__content {
+        height: calc(100% - 140px);
+        overflow: auto;
+        padding: 20px 20px 0;
+        @media (min-width: 480px) {
+            scrollbar-color: rgba(0, 0, 0, 0.15) #F2F2F2;  
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 6px;
+                background: #F2F2F2;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.15);
+            }
+        }
+        @media (min-width: 640px) {
+            height: calc(100% - 160px);
+            padding: 20px 32px 0 40px;
+        }
+    }
+    .policy__block {
+        max-width: none;
+    } 
+    .policy__footer {
+        justify-content: space-between;
+        border-top: 1px solid #E6E6E6;
+        @media (min-width: 480px) {
+            justify-content: center;
+        }
+    }
+    .policy__btn {
+        padding: 9px;
+        width: 130px;
+        @media (min-width: 480px) {
+            width: 140px;
+            margin: 0 10px;
+        }
+    }
+}

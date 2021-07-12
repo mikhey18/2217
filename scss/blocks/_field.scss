@@ -1,0 +1,80 @@
+.field {
+    position: relative;
+    span {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+        font-size: 14px;
+        opacity: 0.6;
+        pointer-events: none;
+        transition: .2s linear;
+        @media (min-width: 480px) {
+            font-size: 15px;
+        }
+    }
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border: none;
+        background-color: transparent;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 28px;
+            height: 18px;
+            background: url('../images/icons/pass.svg') center center ;
+            transition: .3s;
+        }
+        &::after {
+            background: url('../images/icons/pass-destroy.svg') center center ;
+            opacity: 0;
+        }
+        &.view {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    &__input,
+    &__area {
+        display: block;
+        width: 100%;
+        color: $main;
+        font-size: 14px;
+        line-height: 20px;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        background-color: transparent;
+        @media (min-width: 640px) {
+            font-size: 15px;
+        }
+        &:focus ~ span,
+        &:valid ~ span {
+            font-size: 13px;
+            top:5px;
+        }
+    }
+    &__input {
+        height: 60px;
+        padding: 10px 16px 0;
+    }
+    &__area {
+        padding: 25px 16px;
+    }
+    &__input-password {
+        padding-right: 60px;
+    }
+    &__error {
+        display: none;
+    }
+}

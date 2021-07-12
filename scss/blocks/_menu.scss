@@ -1,0 +1,121 @@
+.menu {
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+            @media (min-width: 1024px) {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+    &__block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 81.25%;
+        height: 100%;
+        background-color: #fff;
+        transform: translateX(-120%);
+        transition: .5s;
+        @media (min-width: 1024px) {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 260px;
+            height: auto;
+            transform: translateX(0);
+        }
+        &.active {
+            transform: translateX(0);
+        }
+    }
+    &__logo {
+        height: 80px;
+        padding-left: 20px;
+        @media (min-width: 780px) {
+            height: 100px;
+        }
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+    &__item {
+        display: none;
+        position: relative;
+        padding: 10px 0;
+        background-color: #fff;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background-color: #E6E6E6;
+        }
+        &:first-child::before,
+        &-login::before {
+            left: 0;
+            right: 0;
+            @media (min-width: 1024px) {
+                display: none;
+            }
+        }
+        &-login {
+            display: block;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $main;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 20px 10px 16px;
+        border-left: 4px solid transparent;
+        &.active {
+            border-color: $link;
+        }
+    }
+    &__link-support {
+        span {
+            color: $gray;
+            font-size: 12px;
+            line-height: 20px;
+            background-color: #FFDF7E;
+            border-radius: 10px;
+            padding: 0 7px;
+            margin-left: 23px;
+        }
+    }
+    &__link-exit {
+        color: #999999;
+        svg {
+            margin-right: 14px;
+        }
+    }
+    &__link-login {
+        svg {
+            margin-right: 14px;
+        }
+    }
+}
+
+.menu.log-in {
+    .menu__item {
+        display: block;
+        &-login {
+            display: none;
+        }
+    }
+}

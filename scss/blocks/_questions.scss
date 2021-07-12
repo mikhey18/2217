@@ -1,0 +1,281 @@
+.questions {
+    &__content {
+        padding-bottom: 40px;
+        @media (min-width: 780px) {
+            padding-bottom: 50px;
+        }
+    }
+    &__form {
+        &.hide {
+            display: none;
+        }
+    }
+    &__item {
+        & + & {
+            margin-top: 40px;
+            @media (min-width: 780px) {
+                margin-top: 60px;
+            }
+        }
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    &__gender {
+        margin-bottom: 20px;
+        @media (min-width: 640px) {
+            margin-bottom: 0;
+        }
+    }
+    &__radio {
+        display: inline-block;
+        vertical-align: top;
+        & + & {
+            margin-left: 16px;
+            @media (min-width: 640px) {
+                margin-left: 26px;
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+    &__col {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 20px;
+        @media (min-width: 480px) {
+            width: 50%;
+        }
+        @media (min-width: 640px) {
+            margin-top: 40px;
+            width: 33.333%;
+        }
+    }
+    &__residence {
+        display: flex;
+        flex-wrap: wrap;
+        @media (min-width: 640px) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__select {
+        position: relative;
+        width: 100%;
+        @media (min-width: 640px) {
+            width: 260px;
+            flex-shrink: 0;
+            margin: 0 40px 0 0;
+        }
+        select{
+            width: 100%;
+            height: 60px;
+            display: block !important;
+            opacity: 0;
+        }
+    }
+    &__holder {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+        z-index: 10;
+        font-size: 14px;
+        opacity: 0.6;
+        pointer-events: none;
+        transition: .3s linear;
+        @media (min-width: 640px) {
+            font-size: 15px;
+        }
+        &.active {
+            font-size: 13px;
+            top:5px;
+        }
+    }
+    &__residence-field {
+        display: none;
+        margin: 20px 0 0 0;  
+        width: 100%;
+        @media (min-width: 640px) {
+            margin: 0;
+            max-width: 360px;
+        }
+    }
+    &__residence-prompt {
+        max-width: 300px;
+        color: #999999;
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+    &__text {
+        max-width: 560px;
+        color: $gray;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+    &__upload {
+        // margin-top: 20px;
+    }
+    &__confirm {
+        margin-top: 40px;
+        @media (min-width: 640px) {
+            margin-top: 50px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 380px;
+        margin-top: 40px;
+        @media (min-width: 640px) {
+            margin-top: 50px;
+        }
+    }
+    &__btn {
+        width: 47.3%;
+        padding: 14px;
+    }
+    &__success {
+        display: none;
+        text-align: center;
+        padding: 0 0 10px;
+        @media (min-width: 640px) {
+            padding: 90px 0 10px;
+        }
+        &.active {
+            display: block;
+        }
+    }
+    &__success-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        @media (min-width: 640px) {
+            font-size: 20px;
+        }
+    }
+    &__success-text {
+        color: $gray;
+        font-size: 15px;
+    }
+    &__success-btn {
+        max-width: 300px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 14px;
+        @media (min-width: 640px) {
+            margin-top: 40px;
+        }
+    }
+    .file {
+        max-width: 560px;
+    }
+}
+
+.questions__field.questions__field-date .field__input {
+    color: rgba(#333, 0);
+    transition: .5s;
+    &:focus,
+    &:valid {
+        color: rgba(#333, 1);
+    }
+    &::placeholder {
+        color: $main;
+        opacity: 0.6;
+    }
+
+}
+
+.questions__field.questions__field-date span {
+    font-size: 13px;
+    top:5px;
+}
+
+// стили для кастомного селекта
+.nice-select {
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    &::after {
+        right: 18px;
+        width: 12px;
+        height: 6px;
+        background: url('../images/icons/chevron-down.svg') no-repeat;
+        border: none;
+        transform: rotate(0deg);
+    }
+    &.open {
+        &::after {
+            transform: rotate(0deg);
+        }
+    }
+    .current {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 22px 16px 18px;
+    }
+    .list {
+        width: 100%;
+        border: 1px solid #CCCCCC;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+    }
+    .option {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 12px 16px;
+        &:first-child {
+            display: none;
+        }
+        &:hover,
+        &.selected.focus {
+            background-color: #F5F6F8;
+        }
+    }
+}
+
+// стили для плагина autocomplete
+.ui-front {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;  
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+}
+.ui-widget-content .ui-state-active {
+    background-color: #F5F6F8;
+    color: $main;
+    border: none;
+}
+.ui-menu .ui-menu-item {
+    color: $main;
+    font-size: 14px;
+    padding: 0 10px;
+}
